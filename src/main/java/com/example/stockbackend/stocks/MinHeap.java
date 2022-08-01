@@ -1,5 +1,6 @@
 package com.example.stockbackend.stocks;
 import java.util.List;
+import java.util.ArrayList;
 
 // Cory's implementation of a min heap that uses doubles.
 //passed in array of doubles
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class MinHeap {
 
-    public List<Double> minHeapSort(List<Double> heapList){
+    public ArrayList<Double> minHeapSort(ArrayList<Double> heapList){
         for(int i = heapList.size() / 2 - 1; i >= 0; i--){
             heapList = heapify(heapList, heapList.size(), i);
         }
@@ -23,7 +24,7 @@ public class MinHeap {
         return heapList;
     }
 
-    List<Double> heapify(List<Double> heapList, int l, int i){
+    ArrayList<Double> heapify(ArrayList<Double> heapList, int l, int i){
         int right = 2 * i + 2, left = 2 * i + 1, root = i;
 
         if(right < l && heapList.get(right) > heapList.get(root)){

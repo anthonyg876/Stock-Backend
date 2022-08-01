@@ -95,8 +95,8 @@ public class StockService {
 
     public void sortWithHeap(Stock stock) {
         MinHeap minHeap = new MinHeap();
-        minHeap.minHeapSort(stock.getStockHighs());
-        minHeap.minHeapSort(stock.getStockLows());
+        stock.setStockHighs(minHeap.minHeapSort(stock.getStockHighs()));
+        stock.setStockLows(minHeap.minHeapSort(stock.getStockLows()));
     }
 
 
