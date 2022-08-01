@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "stocks")
 public class StockController {
     
+    //Injects the stockService class so that it does not need be instantiated into the class.
     @Autowired
     private StockService stockService;
 

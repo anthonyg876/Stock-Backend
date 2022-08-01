@@ -16,8 +16,10 @@ public class StockService {
 
     List<Double> list = new ArrayList<>();
 
+    // Hashmap that will contain the stocksafter they have been searched.
     Map<String, Stock>  stocks = new HashMap<>();
 
+    // Fetch the stock with the given name from the dataset.
     public Stock getStock(String stockName) {
         Scanner sc;
 
@@ -81,6 +83,7 @@ public class StockService {
 
     }
 
+    // Sort the stock using the heap.
     public void sortWithHeap(Stock stock) {
         Long time = System.currentTimeMillis();
         MinHeap minHeap = new MinHeap();
@@ -92,7 +95,7 @@ public class StockService {
         stock.setTimeForAlgorithm(totalTime);
     }
 
-    // Andrea's task
+    //Sort the stock using a min heap 
     public void timSort(Stock stock) {
         //Measure how much time it took to execute.
         Long time = System.currentTimeMillis();

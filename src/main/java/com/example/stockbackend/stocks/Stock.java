@@ -5,6 +5,17 @@ import java.util.ArrayList;
 import lombok.Setter;
 import lombok.Getter;
 
+/**
+ * Stock class that will contain the information needed from the stock.
+ * 
+ * String name: name of the stock
+ * double high: max value of the stock.
+ * double low: Lowest value of the stock.
+ * double timeForAlgorithm: Time it took for the data to be sorted.
+ * 
+ * ArrayList<Double> stockHighs: A list of the Highest values of a particular stock since its opening.
+ * ArrayList<Double> stockLows: A list of the lowest values of a particular stock since its opening.
+ */
 public class Stock {
     
     @Getter @Setter private String name;
