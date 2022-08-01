@@ -10,6 +10,7 @@ public class Stock {
     @Getter @Setter private String name;
     @Getter @Setter private double high = 0.0;
     @Getter @Setter private double low = 0.0;
+    @Getter @Setter private double timeForAlgorithm;
 
     @Getter @Setter private ArrayList<Double> stockHighs;
     @Getter @Setter private ArrayList<Double> stockLows;

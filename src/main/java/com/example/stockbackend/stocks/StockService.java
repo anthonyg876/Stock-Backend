@@ -31,7 +31,7 @@ public class StockService {
         //Check to see if the stock even exists
         String nameOfFile = stockName + ".csv";
         try {
-            sc = new Scanner(new File("/home/agravier/vs-workspace/cop_3530/projects/Stock-Backend/Stocks/" + nameOfFile));
+            sc = new Scanner(new File("Stocks/" + nameOfFile));
             sc.useDelimiter(",");
         // while ()
         } catch (FileNotFoundException e) {
@@ -81,27 +81,29 @@ public class StockService {
 
     }
 
-    public double getHigh(String stockName, Boolean highOrLow) {
-        
-        //Check to make sure the stock name is capitalized
-        stockName = stockName.toUpperCase();
-
-        //Finding if the stock currently exists
-        if (stocks.get(stockName) != null) {
-            return stocks.get(stockName).getHigh();
-        }
-        return 0.0;
-    }
-
     public void sortWithHeap(Stock stock) {
+        Long time = System.currentTimeMillis();
         MinHeap minHeap = new MinHeap();
         stock.setStockHighs(minHeap.minHeapSort(stock.getStockHighs()));
         stock.setStockLows(minHeap.minHeapSort(stock.getStockLows()));
+
+        Long endTime = System.currentTimeMillis();
+        Long totalTime = (endTime - time);
+        stock.setTimeForAlgorithm(totalTime);
     }
 
-
     // Andrea's task
-    public void timSort() {
+    public void timSort(Stock stock) {
+        //Measure how much time it took to execute.
+        Long time = System.currentTimeMillis();
         
+        TimSort tim = new TimSort();
+        stock.setStockHighs(tim.callTim(stock.getStockHighs()));
+        stock.setStockLows(tim.callTim(stock.getStockLows()));
+
+        Long endTime = System.currentTimeMillis();
+        Long totalTime = (endTime - time);
+        stock.setTimeForAlgorithm(totalTime);
+
     }
 }
