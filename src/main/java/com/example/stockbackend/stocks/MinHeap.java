@@ -1,5 +1,4 @@
 package com.example.stockbackend.stocks;
-import java.util.List;
 import java.util.ArrayList;
 
 // Cory's implementation of a min heap that uses doubles.
