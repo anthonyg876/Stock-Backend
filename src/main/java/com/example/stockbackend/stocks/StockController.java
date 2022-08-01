@@ -32,7 +32,6 @@ public class StockController {
             stock.setHigh(stock.getStockHighs().get(stock.getStockHighs().size() - 1));
             stock.setLow(stock.getStockLows().get(0));
         }
-
         return ResponseEntity.status(HttpStatus.OK).body(stock);
     }
 

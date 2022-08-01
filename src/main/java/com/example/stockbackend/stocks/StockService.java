@@ -30,7 +30,7 @@ public class StockService {
         //Check to see if the stock even exists
         String nameOfFile = stockName + ".csv";
         try {
-            sc = new Scanner(new File("/home/agravier/vs-workspace/cop_3530/projects/Stock-Backend/stocks/" + nameOfFile));
+            sc = new Scanner(new File("/home/agravier/vs-workspace/cop_3530/projects/Stock-Backend/Stocks/" + nameOfFile));
             sc.useDelimiter(",");
         // while ()
         } catch (FileNotFoundException e) {
