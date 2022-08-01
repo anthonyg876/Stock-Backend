@@ -1,5 +1,6 @@
 package com.example.stockbackend.stocks;
 
+import com.example.stockbackend.stocks.MinHeap;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -91,6 +92,13 @@ public class StockService {
         }
         return 0.0;
     }
+
+    public void sortWithHeap(Stock stock) {
+        MinHeap minHeap = new MinHeap();
+        minHeap.minHeapSort(stock.getStockHighs());
+        minHeap.minHeapSort(stock.getStockLows());
+    }
+
 
     // Andrea's task
     public void timSort() {

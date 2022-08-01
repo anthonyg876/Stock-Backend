@@ -24,6 +24,7 @@ public class StockController {
         //Choose which sort to use.
         if (algorithm.equals("HeapSort")) {
             // Use HeapSort for the algorithm
+            stockService.sortWithHeap(stock);
             stock.setHigh(stock.getStockHighs().get(stock.getStockHighs().size() - 1));
             stock.setLow(stock.getStockLows().get(0));
         }

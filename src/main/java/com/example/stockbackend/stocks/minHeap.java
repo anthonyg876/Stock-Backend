@@ -1,1 +1,0 @@
-// Cory's implementation of a min heap that uses doubles.
